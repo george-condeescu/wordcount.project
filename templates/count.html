@@ -1,0 +1,14 @@
+<h1>Count</h1>
+<a href="{% url 'home' %}">Home</a>
+<table>
+  <tr>
+    <td>word</td>
+    <td>count</td>
+  </tr>
+{% for word, count in worddictionary.items|dictsortreversed:1|dictsort:0 %}
+<tr>
+  <td>{{word}}</td>
+  <td>{{count}}</td>
+</tr>
+{%endfor%}
+</table>
